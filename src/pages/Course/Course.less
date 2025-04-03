@@ -1,0 +1,43 @@
+.khoa-hoc-container {
+  /* Các CSS khác giữ nguyên */
+  
+  .action-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .action-button {
+      margin: 0 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  /* Thêm CSS cho các ô trong bảng */
+  .ant-table-cell {
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Đảm bảo header của bảng cũng được canh giữa */
+  .ant-table-thead > tr > th {
+    text-align: center !important;
+    font-weight: 600;
+  }
+  
+  /* Fix khoảng cách cho popconfirm nếu cần */
+  .ant-popover {
+    z-index: 1050;
+  }
+  
+  /* Fix kích thước cho nút thao tác */
+  .ant-btn-sm {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+  }
+}
