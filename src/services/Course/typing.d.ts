@@ -17,10 +17,6 @@ export enum TrangThaiKhoaHoc {
 export interface GiangVien {
   id: string;            // ID giảng viên
   hoTen: string;         // Họ tên giảng viên
-  email: string;         // Email giảng viên
-  soDienThoai?: string;  // Số điện thoại (không bắt buộc)
-  chuyenMon: string;     // Chuyên môn
-  moTa?: string;         // Mô tả thông tin thêm (không bắt buộc)
   createdAt?: number;    // Thời điểm tạo (timestamp)
   updatedAt?: number;    // Thời điểm cập nhật gần nhất (timestamp)
 }

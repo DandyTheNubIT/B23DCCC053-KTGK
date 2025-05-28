@@ -114,7 +114,7 @@ const CourseContent: React.FC = () => {
               danger
               icon={<DeleteOutlined />}
               size="small"
-              disabled={record.soLuongHocVien > 0}
+              disabled={record.soLuongHocVien > 0 && record.trangThai !== TrangThaiKhoaHoc.DA_KET_THUC}
               className="action-button"
             />
           </Popconfirm>

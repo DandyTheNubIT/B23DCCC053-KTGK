@@ -1,14 +1,13 @@
 declare namespace Appointment {
-    interface AppointmentData {
-      id: number;
-      customerName: string;
-      phoneNumber: string;
-      serviceId: number;
-      employeeId?: number;
-      appointmentDate: string;
-      appointmentTime: string;
-      status: 'pending' | 'confirmed' | 'completed' | 'canceled';
-      createdAt: string;
-      notes?: string;
-    }
+  interface AppointmentData {
+    id: number;
+    serviceId: number;
+    employeeId?: number;
+    customerName: string;
+    customerPhone: string;
+    appointmentDate: string;
+    appointmentTime: string;
+    status: 'pending' | 'confirmed' | 'completed' | 'cancelled';
+    createdAt: string;
   }
+}

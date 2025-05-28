@@ -29,13 +29,30 @@ export const saveKhoaHocList = (khoaHocList: KhoaHoc[]): void => {
  */
 export const getGiangVienList = (): GiangVien[] => {
   const giangVienData = localStorage.getItem('giangvien');
-  if (!giangVienData) return []; 
-  try {
-    return JSON.parse(giangVienData);
-  } catch (error) {
-    console.error('Lỗi khi đọc dữ liệu giảng viên:', error);
-    return [];
+  
+  // Nếu đã có dữ liệu, trả về từ localStorage
+  if (giangVienData) {
+    try {
+      const parsedData = JSON.parse(giangVienData);
+      if (parsedData.length > 0) {
+        return parsedData;
+      }
+    } catch (error) {
+      console.error('Lỗi khi đọc dữ liệu giảng viên:', error);
+    }
   }
+  
+  // Nếu không có dữ liệu, tạo dữ liệu mẫu
+  const sampleGiangVien: GiangVien[] = Array.from({ length: 20 }, (_, index) => ({
+    id: `gv_${index + 1}`,
+    hoTen: `Giảng viên ${index + 1}`,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  }));
+  
+  // Lưu vào localStorage và trả về
+  localStorage.setItem('giangvien', JSON.stringify(sampleGiangVien));
+  return sampleGiangVien;
 };
 
 /**

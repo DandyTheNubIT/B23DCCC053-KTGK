@@ -12,17 +12,22 @@ const { Option } = Select;
 const { Text } = Typography;
 
 // Định nghĩa types inline
-interface Service {
-  id: number;
-  name: string;
-  price: number;
-  duration: number;
-}
-
 interface Employee {
   id: number;
   name: string;
   services: number[];
+  workingHours?: {
+    start: string;
+    end: string;
+  };
+  dailyLimit: number;
+}
+
+interface Service {
+  id: number;
+  name: string;
+  duration: number;
+  price: number;
 }
 
 interface AppointmentData {

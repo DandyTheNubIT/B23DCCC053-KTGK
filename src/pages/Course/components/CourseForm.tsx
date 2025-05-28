@@ -93,7 +93,7 @@ const CourseForm: React.FC<CourseFormProps> = ({
           <Select placeholder="Chọn giảng viên">
             {giangVienList.map((gv) => (
               <Option key={gv.id} value={gv.id}>
-                {gv.hoTen} {gv.chuyenMon ? `- ${gv.chuyenMon}` : ''}
+                {gv.hoTen}
               </Option>
             ))}
           </Select>

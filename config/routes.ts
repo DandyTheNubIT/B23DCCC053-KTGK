@@ -234,6 +234,32 @@
 	},
 
 	{
+		path: '/cau-lac-bo',
+		name: 'Câu lạc bộ',
+		icon: 'TeamOutlined',
+		routes: [
+			{
+				path: '/cau-lac-bo/thong-ke',
+				name: 'Thống kê',
+				component: './Club/ThongKe/index',	
+			}				
+		]
+	},
+
+	{
+		path: '/ke-hoach-du-lich',
+		name: 'Kế hoạch du lịch',
+		icon: 'GlobalOutlined',
+		routes: [
+			{
+				path: '/ke-hoach-du-lich/trang-chu',
+				name: 'Trang chủ - Khám phá điểm đến',
+				component: './TravelPlan/index',
+			},
+		]
+	},
+
+	{
 		path: '/notification',
 		routes: [
 			{

@@ -20,7 +20,6 @@ import {
   LikeOutlined, 
   UserOutlined,
   StarOutlined,
-  CheckCircleOutlined,
   ClockCircleOutlined
 } from '@ant-design/icons';
 
